@@ -1,6 +1,6 @@
-package com.xh.testnetworkwithretrofit.Services;
+package com.xh.testnetworkwithretrofit.services;
 
-import com.xh.testnetworkwithretrofit.Entity.MovieEntity;
+import com.xh.testnetworkwithretrofit.entity.MovieEntity;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
