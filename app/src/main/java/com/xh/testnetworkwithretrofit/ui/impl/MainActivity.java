@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements IMainView {
     Button mBtnOriginalRetrofit;
     @BindView(R.id.btn_retrofit_with_rxJava)
     Button mBtnRetrofitWithRxJava;
+    @BindView(R.id.btn_retrofit_with_rxJava_io)
+    Button mBtnRetrofitWithRxJavaIo;
     @BindView(R.id.activity_main)
     RelativeLayout mActivityMain;
 
@@ -38,14 +40,17 @@ public class MainActivity extends AppCompatActivity implements IMainView {
         mPresenter = new MainPresenter(this);
     }
 
-    @OnClick({R.id.btn_original_retrofit, R.id.btn_retrofit_with_rxJava})
+    @OnClick({R.id.btn_original_retrofit, R.id.btn_retrofit_with_rxJava, R.id.btn_retrofit_with_rxJava_io})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_original_retrofit://原生retrofit
                 clickOnOriginalRetrofit();
                 break;
-            case R.id.btn_retrofit_with_rxJava:
+            case R.id.btn_retrofit_with_rxJava://原生retrofit和rxJava混合
                 mPresenter.clickOnRetrofitWithRxJava();
+                break;
+            case R.id.btn_retrofit_with_rxJava_io:
+                mPresenter.clickOnRetrofitWithRxJavaIo();
                 break;
         }
     }

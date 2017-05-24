@@ -2,7 +2,7 @@ package com.xh.testnetworkwithretrofit.presenter.impl;
 
 import android.widget.Toast;
 
-import com.xh.testnetworkwithretrofit.Entity.MovieEntity;
+import com.xh.testnetworkwithretrofit.entity.MovieEntity;
 import com.xh.testnetworkwithretrofit.model.IMainModel;
 import com.xh.testnetworkwithretrofit.model.impl.MainModel;
 import com.xh.testnetworkwithretrofit.presenter.IMainPresenter;
@@ -45,6 +45,26 @@ public class MainPresenter implements IMainPresenter {
     @Override
     public void clickOnRetrofitWithRxJava() {
         mModel.getMovieWithRxJava(new Subscriber<MovieEntity>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Toast.makeText(mView.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNext(MovieEntity movieEntity) {
+                Toast.makeText(mView.getContext(), movieEntity.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    public void clickOnRetrofitWithRxJavaIo() {
+        mModel.getMovieWithRxJavaAndIo(new Subscriber<MovieEntity>() {
             @Override
             public void onCompleted() {
 

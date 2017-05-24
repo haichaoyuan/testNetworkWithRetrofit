@@ -1,6 +1,6 @@
 package com.xh.testnetworkwithretrofit.model;
 
-import com.xh.testnetworkwithretrofit.Entity.MovieEntity;
+import com.xh.testnetworkwithretrofit.entity.MovieEntity;
 
 import retrofit2.Callback;
 import rx.Subscriber;
@@ -16,4 +16,6 @@ public interface IMainModel {
     void getMovie(Callback<MovieEntity> callback);
 
     void getMovieWithRxJava(Subscriber<MovieEntity> callback);
+
+    void getMovieWithRxJavaAndIo(Subscriber<MovieEntity> subscriber);
 }

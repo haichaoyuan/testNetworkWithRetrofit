@@ -1,4 +1,4 @@
-package com.xh.testnetworkwithretrofit.Entity;
+package com.xh.testnetworkwithretrofit.entity;
 
 import java.util.List;
 

@@ -11,4 +11,6 @@ public interface IMainPresenter{
     void clickOnOriginalRetrofit();
 
     void clickOnRetrofitWithRxJava();
+
+    void clickOnRetrofitWithRxJavaIo();
 }
